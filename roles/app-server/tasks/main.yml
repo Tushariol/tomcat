@@ -35,6 +35,9 @@
     
 
       - name : start tomcat
-        shell:  /opt/tomcat8/bin/catalina.sh start
+        shell: nohup  /opt/tomcat8/bin/startup.sh started
 
-      
+      - name: Run Tomcat
+        shell: ./startup.sh
+        args:
+          chdir: /opt/tomcat8/bin   
