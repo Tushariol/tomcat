@@ -42,7 +42,11 @@
         ansible.builtin.get_url:
            url: https://tom-78.s3.ap-south-1.amazonaws.com/mysql-connector.jar
            dest: /opt/tomcat8/lib/       
-    
+
+      - name: template copy    
+        ansible.builtin.template:
+           src: templates/context.xml
+           dest: /opt/tomcat8/conf/context.xml 
 
       - name : start tomcat
         shell: nohup  /opt/tomcat8/bin/startup.sh started
