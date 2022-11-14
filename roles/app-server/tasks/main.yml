@@ -45,8 +45,8 @@
 
       - name: template copy    
         ansible.builtin.template:
-           src: templates/context.xml
-           dest: /opt/tomcat8/conf/context.xml 
+           src: /opt/tomcat/
+           dest: /o
 
       - name : start tomcat
         shell: nohup  /opt/tomcat8/bin/startup.sh started
