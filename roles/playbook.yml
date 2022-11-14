@@ -1,6 +1,0 @@
----
-- name: Tomcat
-  hosts: all
-  become: true
-  roles:
-    - app-server
