@@ -1,1 +1,2 @@
  download_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz  
+ s3_bucket: https://tom-78.s3.ap-south-1.amazonaws.com/student.war

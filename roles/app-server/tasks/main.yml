@@ -32,6 +32,16 @@
 
       - name: Move files to the /opt/tomcat8 directory
         shell: "mv /opt/tomcat8/apache*/* /opt/tomcat8"
+
+      - name: copy student file
+        ansible.builtin.get_url:
+           url: "{{s3_bucket}}"
+           dest: /opt/tomcat8/webapps/
+
+      - name: jdbc connector
+        ansible.builtin.get_url:
+           url: https://tom-78.s3.ap-south-1.amazonaws.com/mysql-connector.jar
+           dest: /opt/tomcat8/lib/       
     
 
       - name : start tomcat
