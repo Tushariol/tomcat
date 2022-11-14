@@ -10,6 +10,11 @@
           name: "*"
           state: latest
 
+      - name: upgrade the system package
+        ansible.builtin.apt:
+          name: apache2
+          state: latest    
+
       - name: Download Open JDK
         apt:
           name: openjdk-8-jre-headless
