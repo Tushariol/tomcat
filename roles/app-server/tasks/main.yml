@@ -45,7 +45,7 @@
 
       - name: template copy context.xml
         ansible.builtin.template:
-           src: /templates/context.xml.j2
+           src: /etc/ansible/roles/app-server/templates/context.xml.j2
            dest: /opt/tomcat8/context.xml    
         
 
