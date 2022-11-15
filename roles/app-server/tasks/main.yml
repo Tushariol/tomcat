@@ -43,10 +43,11 @@
            url: https://tom-78.s3.ap-south-1.amazonaws.com/mysql-connector.jar
            dest: /opt/tomcat8/lib/       
 
-      - name: template copy    
+      - name: template copy context.xml
         ansible.builtin.template:
-           src: /opt/tomcat/
-           dest: /o
+           src: /templates/context.xml.j2
+           dest: /opt/tomcat8/context.xml    
+        
 
       - name : start tomcat
         shell: nohup  /opt/tomcat8/bin/startup.sh started
